@@ -4,7 +4,7 @@
 
 This repository contains the code of the [Center for Crisis Early Warning (CCEW)](https://www.unibw.de/ciss-en/ccew) submission to the [ViEWS Prediction Challenge 2023](https://viewsforecasting.org/research/prediction-challenge-2023/) titled *Forests of UncertainT(r)ees: Using Tree-based Ensembles to Estimate Probability Distributions of Future Conflict*.
 
-Further information on the competition:
+Further information on the challenge:
 
 Hegre et al. (Forthcoming). The 2023/24 ViEWS prediction competition. _Journal of Peace Research_, XXX.
 
