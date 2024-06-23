@@ -1,7 +1,12 @@
 # CCEW Submission ViEWS Prediction Challenge 2023
 
 ## Overview
+
 This repository contains the code of the [Center for Crisis Early Warning (CCEW)](https://www.unibw.de/ciss-en/ccew) submission to the [ViEWS Prediction Challenge 2023](https://viewsforecasting.org/research/prediction-challenge-2023/) titled *Forests of UncertainT(r)ees: Using Tree-based Ensembles to Estimate Probability Distributions of Future Conflict*.
+
+Further information on the competition:
+
+Hegre et al. (Forthcoming). The 2023/24 ViEWS prediction competition. _Journal of Peace Research_, XXX.
 
 ## Introduction
 Forecasting conflict, especially at the subnational level, involves high uncertainty in point predictions, which hampers practical application. Our contribution addresses this by integrating distribution-specific models into conflict prediction pipelines to estimate probability distributions and by incorporating regional modeling to account for local conflict dynamics.
@@ -19,7 +24,7 @@ For the regression step:
 
 The data used in this project was provided by the ViEWS team as part of the 2023/24 prediction challenge. It covers Africa and the Middle East, with monthly records available for each PRIO grid cell from 1990 onwards. The target variable is the number of fatalities from state-based armed conflict events, sourced from the Uppsala Conflict Data Program (UCDP). The dataset is highly zero-inflated, reflecting the rarity of conflict events, and includes a range of features relevant to predicting conflict dynamics.
 
-More details about this work can be found in our technical report *Forests of UncertainT(r)ees: Using Tree-based Ensembles to Estimate Probability Distributions of Future Conflict* in the `[tbd]` folder.
+More details about this work can be found in our technical report *Forests of UncertainT(r)ees: Using Tree-based Ensembles to Estimate Probability Distributions of Future Conflict* in the repository root.
 
 ## Usage
 
@@ -37,7 +42,16 @@ The `src/views_evaluation.ipynb` Jupyter notebook provides a few code snippets t
 The different components needed to run the pipeline are structured into estimators and utils.
 
 - `src/estimators` includes sklearn-compatible wrappers for the Distributional Random Forest and the NGBoost implementations, as well as our hurdle class, which handles tuning, model selection and generation of raw predictions, and our global-local ensemble class.
-- `src/utils` contains all workhorse functions called by the two pipelines to load data, handle conversions, create clusters, tune models, score models and handle evaluations. 
+- `src/utils` contains all workhorse functions called by the two pipelines to load data, handle conversions, create clusters, tune models, score models and handle evaluations.
+
+The following outputs are stored in the repository:
+
+- `src/tuning_trials_hdbscan` contains the hyperopt trials objects from hyperparameter tuning, which store tuning performance and are used to select the best models.
+- `src/evaluation` contains metrics for our models and the five benchmarks.
+- `src/unibw_trees*` directories contain our predictions for the respective model.
+- `src/figures` contains the figures generated with the `views_evaluation.ipynb` notebooks for the technical report.
+
+The required inputs for clustering and plotting are stored in `src/data`.
 
 
 ### Requirements
