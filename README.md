@@ -118,3 +118,5 @@ For any question, please contact one of the three original contributors of the V
 - [Martin Hofer](mailto:hofer.martin@pm.me)
 - [Daniel Mittermaier](mailto:daniel.mittermaier@unibw.de)
 
+## Disclaimer
+The Center for Crisis Early Warning (Kompetenzzentrum Krisenfrüherkennung) is funded by the German Federal Ministry of Defense and the German Federal Foreign Office. The views and opinions expressed in this article are those of the author(s) and do not necessarily reect the official policy or position of any agency of the German government.
